@@ -159,7 +159,14 @@ console.log(userArray);
 const userObj = Object.fromEntries(userArray);
 console.log(userObj);
 
-
+// 15. Query String Parser
+const data = "name=Avi&course=CSE";;
+const result = {};
+data.split("&").forEach((pair => {
+    const [key, value] = pair.split("=");
+    result[key] = value;
+}));
+console.log(result);
 
 
 
