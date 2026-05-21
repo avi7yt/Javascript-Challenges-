@@ -30,7 +30,7 @@ const isPropertyExist = (obj,prop) => {
 }
 console.log(isPropertyExist(student, 'name'));
 
-// Level 2 — Methods and this
+// 💡 Level 2 — Methods and this
 // 6. Person Method
 const person = {
     firstName: "Avi",
@@ -85,5 +85,31 @@ const Counter = {
 console.log(Counter.increment(50));
 console.log(Counter.decrement(10));
 console.log(Counter.reset());
+
+// 💡Level 3 — Object.keys, values, entries
+
+// 9. Print All Keys
+const library = {
+    'staff-member': ['rama tiwari', 'suniil obraoi', 'raghvendra teju'],
+    NumberOfBooks: 10000,
+    CategoriesOfBooks: {
+        'major fiction categories': ['Romance', 'Fantasy', 'Science Fiction', 'Mystery & Thriller', 'Historical Fiction'],
+        'major non-fiction categories': ['Biography & Memoi', 'Self-Help & Wellness', 'true crime', 'history'],
+        numberOfSeats : {
+            refenceSection: 100,
+            individualZone: 500
+        }
+    },
+}
+
+const allKeysOfObject = Object.keys(library);
+console.log(allKeysOfObject);
+const allValuesOfObject = Object.values(library);
+console.log(allValuesOfObject);
+const entriesOfObject = Object.entries(library);
+console.log(entriesOfObject);
+
+
+
 
 

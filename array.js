@@ -115,6 +115,7 @@ function findSecondLargest(arr) {
 }
 console.log(findSecondLargest(number));
 
+// 13. Find Second Smallest Number
 
 
 
