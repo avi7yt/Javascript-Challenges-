@@ -147,6 +147,22 @@ const searchedBooks = (search) => {
 const fictionBook = searchedBooks("fiction");
 console.log(fictionBook);
 
+// Level 5 — Object.fromEntries()
+
+// 14. Array to Object
+const user = {
+    name: "Avi",
+    age: 19
+};
+const userArray = Object.entries(user);
+console.log(userArray);
+const userObj = Object.fromEntries(userArray);
+console.log(userObj);
+
+
+
+
+
 
 
 
