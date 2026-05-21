@@ -38,3 +38,21 @@ console.log(greet());
 const greetUser = (name = "guest") => `Hi ${name}`;  
 console.log(greetUser("Rohit"));
 
+// Level 2 — Parameters vs Arguments
+
+// 18. Greeting Function
+// Use default parameter.
+const greetAgain = (name = "Guest") => `Good Morning, ${name}`;
+console.log(greetAgain("Ranjan"));
+
+// 19. Rest Parameters
+// Create sum(...numbers)
+const sumWithRestPara = (...numbers) => {
+    return numbers.reduce((preval, currval) => {
+        return preval += currval;
+    },0);
+}
+
+console.log(sumWithRestPara(23,45,555,55,555,444,2));
+
+
