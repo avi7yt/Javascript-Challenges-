@@ -90,17 +90,28 @@ console.log(Counter.reset());
 
 // 9. Print All Keys
 const library = {
-    'staff-member': ['rama tiwari', 'suniil obraoi', 'raghvendra teju'],
-    NumberOfBooks: 10000,
-    CategoriesOfBooks: {
-        'major fiction categories': ['Romance', 'Fantasy', 'Science Fiction', 'Mystery & Thriller', 'Historical Fiction'],
-        'major non-fiction categories': ['Biography & Memoi', 'Self-Help & Wellness', 'true crime', 'history'],
-        numberOfSeats : {
-            refenceSection: 100,
-            individualZone: 500
-        }
-    },
-}
+  "staff-member": ["rama tiwari", "suniil obraoi", "raghvendra teju"],
+  NumberOfBooks: 10000,
+  CategoriesOfBooks: {
+    "major fiction categories": [
+      "Romance",
+      "Fantasy",
+      "Science Fiction",
+      "Mystery & Thriller",
+      "Historical Fiction",
+    ],
+    "major non-fiction categories": [
+      "Biography & Memoi",
+      "Self-Help & Wellness",
+      "true crime",
+      "history",
+    ],
+  },
+  numberOfSeats: {
+    refenceSection: 100,
+    individualZone: 500,
+  },
+};
 
 const allKeysOfObject = Object.keys(library);
 console.log(allKeysOfObject);
@@ -108,6 +119,39 @@ const allValuesOfObject = Object.values(library);
 console.log(allValuesOfObject);
 const entriesOfObject = Object.entries(library);
 console.log(entriesOfObject);
+
+// Level 4 — Object.freeze() and Object.seal()
+
+// 12. Freeze an Object
+Object.freeze(library);
+
+// 13. Seal an Object
+// Object.seal(library);
+library.newProperty = "add new property";
+library.CategoriesOfBooks = "changed"
+delete library.CategoriesOfBooks;
+console.log(library);
+
+// Additional operation
+// find only searched books
+const books = Object.values(library["CategoriesOfBooks"]).flat(2);
+const searchedBooks = (search) => {
+    const result = books.filter((book) => {
+        if (book.toLowerCase().includes(search)) {
+            return book;
+        }
+    });
+    return result;
+};
+
+const fictionBook = searchedBooks("fiction");
+console.log(fictionBook);
+
+
+
+
+
+
 
 
 
