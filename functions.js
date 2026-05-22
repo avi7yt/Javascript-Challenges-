@@ -55,4 +55,18 @@ const sumWithRestPara = (...numbers) => {
 
 console.log(sumWithRestPara(23,45,555,55,555,444,2));
 
+// 20. arguments Object
+// Use arguments to multiply all values.
+
+// Note: arguments exists only in non-arrow functions.
+function multiplyAll() {
+    let result = 1;
+    
+    for (let i = 0; i < arguments.length; i++){
+        result *= arguments[i];
+    }
+    return Array.isArray(arguments);
+}
+console.log(multiplyAll(2,3,4,5,6,7,8,9));
+
 
