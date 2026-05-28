@@ -69,4 +69,19 @@ function multiplyAll() {
 }
 console.log(multiplyAll(2,3,4,5,6,7,8,9));
 
+// Part 3: this Deep Dive
 
+// 21. Normal Function vs Arrow
+// Predict outputs. - 
+const obj = {
+  name: "Avi",
+  normal() {
+    console.log(this.name);
+  },
+  arrow: () => {
+    console.log(this.name);
+  },
+};
+
+obj.normal();
+obj.arrow()
